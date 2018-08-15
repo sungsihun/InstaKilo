@@ -25,7 +25,9 @@
 
 - (void)setupCategories {
     PhotoCategory *food = [[PhotoCategory alloc] initWithName:@"Food"];
-    self.categories = @[food];
+    PhotoCategory *fruit = [[PhotoCategory alloc] initWithName:@"Fruit"];
+    PhotoCategory *dessert = [[PhotoCategory alloc] initWithName:@"Dessert"];
+    self.categories = @[food, fruit, dessert];
 }
 
 - (NSInteger)numberOfSections {

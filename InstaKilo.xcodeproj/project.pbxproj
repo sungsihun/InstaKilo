@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		066030B72124A67A002AE519 /* HeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 066030B62124A67A002AE519 /* HeaderCollectionReusableView.m */; };
 		06CC83CD212454740032E3B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CC83CC212454740032E3B4 /* AppDelegate.m */; };
 		06CC83D0212454740032E3B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CC83CF212454740032E3B4 /* ViewController.m */; };
 		06CC83D3212454740032E3B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CC83D1212454740032E3B4 /* Main.storyboard */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		066030B52124A67A002AE519 /* HeaderCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		066030B62124A67A002AE519 /* HeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionReusableView.m; sourceTree = "<group>"; };
 		06CC83C8212454740032E3B4 /* InstaKilo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaKilo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CC83CB212454740032E3B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		06CC83CC212454740032E3B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 				06CC840D2124967C0032E3B4 /* PhotoCategory.m */,
 				06CC83CE212454740032E3B4 /* ViewController.h */,
 				06CC83CF212454740032E3B4 /* ViewController.m */,
+				066030B52124A67A002AE519 /* HeaderCollectionReusableView.h */,
+				066030B62124A67A002AE519 /* HeaderCollectionReusableView.m */,
 				06CC840621248C310032E3B4 /* CollectionViewCell.h */,
 				06CC840721248C310032E3B4 /* CollectionViewCell.m */,
 				06CC83D1212454740032E3B4 /* Main.storyboard */,
@@ -286,6 +291,7 @@
 				06CC840B212490920032E3B4 /* DataManager.m in Sources */,
 				06CC840821248C310032E3B4 /* CollectionViewCell.m in Sources */,
 				06CC83D0212454740032E3B4 /* ViewController.m in Sources */,
+				066030B72124A67A002AE519 /* HeaderCollectionReusableView.m in Sources */,
 				06CC83DB212454750032E3B4 /* main.m in Sources */,
 				06CC840E2124967C0032E3B4 /* PhotoCategory.m in Sources */,
 				06CC83CD212454740032E3B4 /* AppDelegate.m in Sources */,

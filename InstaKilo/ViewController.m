@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "CollectionViewCell.h"
 #import "DataManager.h"
+#import "HeaderCollectionReusableView.h"
 
 @interface ViewController () <UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -39,6 +40,13 @@
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     cell.photo = [self.manager photoAtIndexPath:indexPath];
     return cell;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    HeaderCollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    PhotoCategory *category = [self.manager photoCategoryAtIndexPath:indexPath];
+    [header configureWithCategory:category];
+    return header;
 }
 
 
