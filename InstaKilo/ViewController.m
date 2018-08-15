@@ -12,6 +12,7 @@
 #import "HeaderCollectionReusableView.h"
 
 @interface ViewController () <UICollectionViewDataSource>
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic) DataManager *manager;
 @end
@@ -21,9 +22,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"InstaKilo";
-    self.manager = [[DataManager alloc] init];
+//    self.manager = [[DataManager alloc] init];
+    self.manager = [[DataManager alloc] initWithSelectedSegmentIndex:0];
 }
 
+- (void)viewWillLayoutSubviews {
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
+    layout.sectionHeadersPinToVisibleBounds = YES;
+    
+    CGSize itemSize = CGSizeMake(self.collectionView.bounds.size.width/3, self.collectionView.bounds.size.width/3);
+ 
+    layout.itemSize = itemSize;
+}
 
 
 #pragma mark - Data Source
@@ -50,6 +60,23 @@
 }
 
 
+- (IBAction)segmentedControl:(id)sender {
+    switch (self.segmentedControl.selectedSegmentIndex) {
+        case 0:   // subject
+        {
+            self.manager = [[DataManager alloc] initWithSelectedSegmentIndex:0];
+            [self.collectionView reloadData];
+            break;
+        }
+        case 1:   // location
+        {
+            self.manager = [[DataManager alloc] initWithSelectedSegmentIndex:1];
+            [self.collectionView reloadData];
+            break;
+        }
+    }
+    
+}
 
 
 

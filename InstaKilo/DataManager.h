@@ -16,6 +16,7 @@
 - (Photo *)photoAtIndexPath:(NSIndexPath *)indexPath;
 - (PhotoCategory *)photoCategoryAtIndexPath:(NSIndexPath *)indexPath;
 
+- (instancetype)initWithSelectedSegmentIndex:(NSInteger)index;
 
 
 @end

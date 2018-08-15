@@ -12,22 +12,36 @@
 
 @interface DataManager ()
 @property (nonatomic)NSArray<PhotoCategory *>*categories;
+@property (nonatomic)NSArray<PhotoCategory *>*objectCategories;
+@property (nonatomic)NSArray<PhotoCategory *>*locationCategories;
+
 @end
 
 @implementation DataManager
 
-- (instancetype)init {
+//- (instancetype)init {
+//    if (self = [super init]){
+//        [self setupCategories];
+//    }
+//    return self;
+//}
+
+- (instancetype)initWithSelectedSegmentIndex:(NSInteger)index {
     if (self = [super init]){
-        [self setupCategories];
+        [self setupCategories:(NSInteger)index];
     }
     return self;
 }
 
-- (void)setupCategories {
-    PhotoCategory *food = [[PhotoCategory alloc] initWithName:@"Food"];
-    PhotoCategory *fruit = [[PhotoCategory alloc] initWithName:@"Fruit"];
-    PhotoCategory *dessert = [[PhotoCategory alloc] initWithName:@"Dessert"];
-    self.categories = @[food, fruit, dessert];
+- (void)setupCategories:(NSUInteger)index {
+    if (index == 0) {
+        PhotoCategory *food = [[PhotoCategory alloc] initWithName:@"Food"];
+        PhotoCategory *fruit = [[PhotoCategory alloc] initWithName:@"Fruit"];
+        self.categories = @[food, fruit];
+    } else {
+        PhotoCategory *dessert = [[PhotoCategory alloc] initWithName:@"Dessert"];
+        self.categories = @[dessert];
+    }
 }
 
 - (NSInteger)numberOfSections {

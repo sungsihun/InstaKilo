@@ -23,6 +23,7 @@
     NSString *lowerCaseName = name.lowercaseString;
     NSMutableArray<Photo*> *temp = [NSMutableArray array];
     
+    
     for (NSInteger i = 1; i < 11; i++) {
         NSString *imageName = [NSString stringWithFormat:@"%@0%ld", lowerCaseName, i];
         UIImage *image = [UIImage imageNamed:imageName];
