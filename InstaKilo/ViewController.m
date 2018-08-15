@@ -7,23 +7,43 @@
 //
 
 #import "ViewController.h"
+#import "CollectionViewCell.h"
+#import "DataManager.h"
 
-@interface ViewController ()
-
+@interface ViewController () <UICollectionViewDataSource>
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic) DataManager *manager;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"InstaKilo";
+    self.manager = [[DataManager alloc] init];
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - Data Source
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return [self.manager numberOfSections];
 }
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [self.manager numberOfItemsInSection:section];
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.photo = [self.manager photoAtIndexPath:indexPath];
+    return cell;
+}
+
+
+
+
 
 
 @end

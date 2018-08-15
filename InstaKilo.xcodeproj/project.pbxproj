@@ -15,6 +15,10 @@
 		06CC83DB212454750032E3B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CC83DA212454750032E3B4 /* main.m */; };
 		06CC83E5212454750032E3B4 /* InstaKiloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CC83E4212454750032E3B4 /* InstaKiloTests.m */; };
 		06CC83F0212454750032E3B4 /* InstaKiloUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CC83EF212454750032E3B4 /* InstaKiloUITests.m */; };
+		06CC840521248A770032E3B4 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CC840421248A770032E3B4 /* Photo.m */; };
+		06CC840821248C310032E3B4 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CC840721248C310032E3B4 /* CollectionViewCell.m */; };
+		06CC840B212490920032E3B4 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CC840A212490920032E3B4 /* DataManager.m */; };
+		06CC840E2124967C0032E3B4 /* PhotoCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CC840D2124967C0032E3B4 /* PhotoCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		06CC83EB212454750032E3B4 /* InstaKiloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaKiloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CC83EF212454750032E3B4 /* InstaKiloUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstaKiloUITests.m; sourceTree = "<group>"; };
 		06CC83F1212454750032E3B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06CC840321248A770032E3B4 /* Photo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		06CC840421248A770032E3B4 /* Photo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		06CC840621248C310032E3B4 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		06CC840721248C310032E3B4 /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		06CC8409212490920032E3B4 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		06CC840A212490920032E3B4 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		06CC840C2124967C0032E3B4 /* PhotoCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCategory.h; sourceTree = "<group>"; };
+		06CC840D2124967C0032E3B4 /* PhotoCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCategory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +115,16 @@
 			children = (
 				06CC83CB212454740032E3B4 /* AppDelegate.h */,
 				06CC83CC212454740032E3B4 /* AppDelegate.m */,
+				06CC8409212490920032E3B4 /* DataManager.h */,
+				06CC840A212490920032E3B4 /* DataManager.m */,
+				06CC840321248A770032E3B4 /* Photo.h */,
+				06CC840421248A770032E3B4 /* Photo.m */,
+				06CC840C2124967C0032E3B4 /* PhotoCategory.h */,
+				06CC840D2124967C0032E3B4 /* PhotoCategory.m */,
 				06CC83CE212454740032E3B4 /* ViewController.h */,
 				06CC83CF212454740032E3B4 /* ViewController.m */,
+				06CC840621248C310032E3B4 /* CollectionViewCell.h */,
+				06CC840721248C310032E3B4 /* CollectionViewCell.m */,
 				06CC83D1212454740032E3B4 /* Main.storyboard */,
 				06CC83D4212454750032E3B4 /* Assets.xcassets */,
 				06CC83D6212454750032E3B4 /* LaunchScreen.storyboard */,
@@ -262,8 +282,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06CC840521248A770032E3B4 /* Photo.m in Sources */,
+				06CC840B212490920032E3B4 /* DataManager.m in Sources */,
+				06CC840821248C310032E3B4 /* CollectionViewCell.m in Sources */,
 				06CC83D0212454740032E3B4 /* ViewController.m in Sources */,
 				06CC83DB212454750032E3B4 /* main.m in Sources */,
+				06CC840E2124967C0032E3B4 /* PhotoCategory.m in Sources */,
 				06CC83CD212454740032E3B4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
